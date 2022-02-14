@@ -23,7 +23,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 			return new User("techgeeknext", "$2a$10$ixlPY3AAd4ty1l6E2IsQ9OFZi2ba9ZQE0bP7RFcGIWNhyFrrT3YUi",
 					new ArrayList<>());
 		} else {
-			throw new RuntimeException("User not found with username: " + username);
+			throw new UsernameNotFoundException("User not found with username: " + username);
 			//TEST Java
 		}
 		
